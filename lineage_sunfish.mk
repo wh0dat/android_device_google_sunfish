@@ -4,8 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Inherit some common Lineage stuff.
-TARGET_DISABLE_EPPE := true
+# Inherit some common RisingOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
@@ -17,6 +16,18 @@ include device/google/sunfish/device-lineage.mk
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 4a
 PRODUCT_NAME := lineage_sunfish
+
+RISING_CHIPSET := Snapdragon730G
+RISING_MAINTAINER := F1a5H.&.xioyo
+
+TARGET_DISABLE_EPPE := true
+TARGET_ENABLE_BLUR := true
+TARGET_ENABLE_PIXEL_GBOARD_PADDINGS := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_USE_PIXEL_FINGERPRINT := false
+WITH_GMS := true
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2340
